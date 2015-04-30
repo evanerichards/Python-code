@@ -1,0 +1,26 @@
+import serial
+import time
+#import maya.cmds as cmds
+#from datetime import datetime
+
+#now = datetime.now()
+
+#previous_hour = cmds.getAttr('rendertimer.translateX')
+#previous_sec = cmds.getAttr('rendertimer.translateY')
+#previous_min = cmds.getAttr('rendertimer.translateZ')
+#elap_time = ((now.hour - previous_hour) * 3600) + ((now.minute - previous_min) * 60) + (now.second - previous_sec)
+ser = serial.Serial('COM7', 9600)
+time.sleep(2)
+ser.write("Y")
+
+#ser.write("Time - ")
+#ser.write(str((int(elap_time)) / 3600).zfill(1))
+#ser.write(":")
+#ser.write(str(((int(elap_time))/60)%60).zfill(3))
+#ser.write(":")
+#ser.write(str(((int(elap_time))%60)).zfill(2))
+
+
+#print "H:","%02d" % ((int(elap_time)) / 3600), "M:","%02d" % (((int(elap_time))/60)%60), "S:","%02d" % ((int(elap_time))%60)
+
+ser.close()
