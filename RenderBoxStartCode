@@ -1,0 +1,16 @@
+import serial
+import time
+#import maya.cmds as cmds
+#from datetime import datetime
+
+ser = serial.Serial('COM7', 9600)
+time.sleep(2)
+ser.write("X")
+
+#now = datetime.now()
+#cmds.createNode( 'transform', n='rendertimer' )
+#cmds.setAttr( 'rendertimer.translateX', now.hour )
+#cmds.setAttr( 'rendertimer.translateZ', now.minute )
+#cmds.setAttr( 'rendertimer.translateY', now.second )
+
+ser.close()
